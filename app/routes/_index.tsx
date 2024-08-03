@@ -14,16 +14,14 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function Index() {
   return (
     <main className="h-screen flex flex-col justify-center items-center gap-10">
-      <h1 className="text-5xl font-bold text-center">
+      <h1 className="text-3xl md:text-5xl font-bold text-center">
         A Chat App built with
         <br />
         <span className="bg-gradient-to-r text-transparent from-primary to-secondary bg-clip-text">
           Server Side Events
         </span>
       </h1>
-      <p className="text-center">
-        What are you waiting for? Log in and get chatting.
-      </p>
+      <p className="text-center">Create an account to start chatting.</p>
       <div className="flex flex-row justify-center items-center gap-6 text-lg">
         <Link
           to="/signup"

@@ -98,7 +98,7 @@ export default function Route() {
         {messages.map((msg) => (
           <div
             key={msg.id}
-            className="w-full flex flex-row gap-4 items-center bg-foreground snap-end"
+            className="w-full flex flex-row gap-4 align-items-start   snap-end"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export default function Route() {
               strokeWidth={1.5}
               className={`size-12 ${
                 msg.user.username === username ? `bg-secondary` : `bg-accent`
-              } fill-background rounded`}
+              } fill-background rounded flex-shrink-0 `}
             >
               <path
                 strokeLinecap="round"
@@ -115,7 +115,7 @@ export default function Route() {
                 d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
               />
             </svg>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 bg-foreground w-full">
               <div className="flex flex-row items-baseline gap-2">
                 <p className="text-primary font-bold">{msg.user.username}</p>
                 <p className="text-sm text-gray-500">
