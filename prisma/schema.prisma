@@ -17,4 +17,14 @@ model User {
   id String @id @default(uuid())
   username String @unique
   password String
+  messages Message[]
+}
+
+model Message {
+  id String @id @default(uuid())
+  message String
+  createdAt DateTime
+
+  userId String
+  user User @relation(fields:[userId], references: [id])
 }

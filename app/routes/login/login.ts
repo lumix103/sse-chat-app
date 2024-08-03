@@ -13,7 +13,7 @@ export async function validateUser(username: string, password: string) {
 
   const bcrypt = await import("bcrypt");
 
-  const match = (await bcrypt.compare(password, user.password)) as boolean;
+  const match = await bcrypt.compare(password, user.password);
 
   return match;
 }
