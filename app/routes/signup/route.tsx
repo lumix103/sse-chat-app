@@ -1,5 +1,4 @@
-import { Prisma } from "@prisma/client";
-import { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
+import { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
 import { Form, Link, json, redirect, useActionData } from "@remix-run/react";
 import { createUser } from "./signup";
 import { getSession } from "~/session.server";
@@ -25,15 +24,13 @@ export async function action({ request }: ActionFunctionArgs) {
     });
   }
 
-  try {
-    createUser(values["username"].toString(), values["password"].toString());
-  } catch (error) {
-    if (error instanceof Prisma.PrismaClientKnownRequestError) {
-      if (error.code === "P2002") {
-        return json({ message: "This username is already taken!", ok: false });
-      }
-    }
-    return json({ message: "An unknown error occurred", ok: false });
+  const created = await createUser(
+    values["username"].toString(),
+    values["password"].toString()
+  );
+
+  if (!created) {
+    return json({ message: "This user already exists.", ok: false });
   }
 
   return redirect("/login");

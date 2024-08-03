@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/node";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { eventStream } from "remix-utils/sse/server";
 import { emitter } from "~/utils/emitter.server";
 

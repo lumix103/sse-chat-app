@@ -2,7 +2,7 @@ import {
   ActionFunctionArgs,
   LoaderFunctionArgs,
   redirect,
-} from "@remix-run/node";
+} from "@vercel/remix";
 import { Form, Link, json, useActionData } from "@remix-run/react";
 import { commitSession, getSession } from "~/session.server";
 import { validateUser } from "./login";

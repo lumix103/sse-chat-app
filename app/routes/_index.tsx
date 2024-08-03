@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, redirect } from "@remix-run/node";
+import { LoaderFunctionArgs, redirect } from "@vercel/remix";
 import { Link } from "@remix-run/react";
 import { getSession } from "~/session.server";
 

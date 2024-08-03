@@ -3,7 +3,7 @@ import {
   LoaderFunctionArgs,
   json,
   redirect,
-} from "@remix-run/node";
+} from "@vercel/remix";
 import { Form, useLoaderData, useRevalidator } from "@remix-run/react";
 import { useEffect } from "react";
 import { useEventSource } from "remix-utils/sse/react";
