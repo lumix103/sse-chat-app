@@ -5,12 +5,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#160510",
-        foreground: "#1d0d17",
-        text: "#fae9f2",
-        primary: "#e68bc5",
-        secondary: "#7f531b",
-        accent: "#d2d030",
+        text: "#0b0408",
+        background: "#fcf8fa",
+        primary: "#cb4d93",
+        secondary: "#e698c2",
+        accent: "#df6dab",
+        foreground: "#f4f0f2",
       },
       fontSize: {
         sm: "0.750rem",

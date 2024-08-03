@@ -66,7 +66,7 @@ export default function Route() {
             name="username"
             type="text"
             required
-            className="px-1 text-background rounded"
+            className="px-1 active:text-text  rounded"
           />
           <label htmlFor="Username" className="pt-2 text-lg">
             Password
@@ -75,7 +75,7 @@ export default function Route() {
             name="password"
             type="password"
             required
-            className="mb-4 px-1 text-background rounded"
+            className="mb-4 px-1 active:text-text rounded"
           />
           <button
             type="submit"

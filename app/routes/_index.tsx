@@ -5,7 +5,7 @@ import { getSession } from "~/session.server";
 export async function loader({ request }: LoaderFunctionArgs) {
   const session = await getSession(request.headers.get("Cookie"));
   if (session.has("username")) {
-    return redirect("/chat");
+    return redirect("/chatboard");
   }
 
   return null;
@@ -18,7 +18,7 @@ export default function Index() {
         A Chat App built with
         <br />
         <span className="bg-gradient-to-r text-transparent from-primary to-secondary bg-clip-text">
-          SSE Techonologies
+          Server Side Events
         </span>
       </h1>
       <p className="text-center">
