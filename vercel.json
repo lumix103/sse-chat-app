@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/routes/chat/route.tsx": {
+      "maxDuration": 900
+    }
+  }
+}
